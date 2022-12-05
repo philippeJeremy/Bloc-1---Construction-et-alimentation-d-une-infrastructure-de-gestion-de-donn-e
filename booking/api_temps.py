@@ -16,9 +16,9 @@ for ville in villes:
     r = requests.get(url)
     lat = r.json()[0]["lat"]
     lon = r.json()[0]["lon"]
-    a = requests.get(f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={key}&units=metric")
+    a = requests.get(f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={key}&lang=fr&units=metric")
     data = a.json()
-    temps.append({"ville_rechercher" : ville, data.get('list')[1].get('dt_txt'): {"temperature" : data.get('list')[1].get('main').get('temp_max'),
+    temps.append({"ville_rechercher" : ville, data.get('list')[1].get('dt_txt'): {"temperature" : (data.get('list')[1].get('main').get('temp_max')).round(2),
                                                                            "temps" : data.get('list')[1].get('weather')[0].get('description')},
                                         data.get('list')[9].get('dt_txt'): {"temperature" :data.get('list')[9].get('main').get('temp_max'),
                                                                             "temps" : data.get('list')[9].get('weather')[0].get('description')},
