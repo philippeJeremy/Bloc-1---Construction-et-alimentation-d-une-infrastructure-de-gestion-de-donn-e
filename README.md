@@ -1,66 +1,56 @@
-# kayak
+Project Title
+One Paragraph of project description goes here
 
-Date 01/05/2023 au 07/05/2023
+Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Objectif:
+Prerequisites
+What things you need to install the software and how to install them
 
-Un .csvfichier dans un bucket S3 contenant des informations enrichies sur la météo et les hôtels pour chaque ville française
+Give examples
+Installing
+A step by step series of examples that tell you how to get a development env running
 
-Une base de données SQL où nous devrions pouvoir obtenir les mêmes données nettoyées de S3
+Say what the step will be
 
-Deux cartes où vous devriez avoir un Top 5 des destinations et un Top 20 des hôtels de la région. Vous pouvez utiliser plotly ou toute autre bibliothèque pour le faire
+Give the example
+And repeat
 
-######################
+until finished
+End with an example of getting some data out of the system or using it for a little demo
 
-Utilisez https://nominatim.org/ pour obtenir les coordonnées gps de toutes les villes (pas d'abonnement requis) Documentation : https://nominatim.org/release-docs/develop/api/Search/
+Running the tests
+Explain how to run the automated tests for this system
 
-Utilisez https://openweathermap.org/appid (vous devez vous abonner pour obtenir une apikey gratuite) et https://openweathermap.org/api/one-call-api pour obtenir des informations sur la météo des 35 villes et mettre dans un DataFrame
+Break down into end to end tests
+Explain what these tests test and why
 
-#####################
+Give an example
+And coding style tests
+Explain what these tests test and why
 
-www.booking.com
+Give an example
+Deployment
+Add additional notes about how to deploy this on a live system
 
-nom de l'Hotel,
-Url vers sa page booking.com,
-Ses coordonnées : latitude et longitude
-Note donnée par les utilisateurs du site
-Description textuelle de l'hôtel
+Built With
+Dropwizard - The web framework used
+Maven - Dependency Management
+ROME - Used to generate RSS Feeds
+Contributing
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
+Versioning
+We use SemVer for versioning. For the versions available, see the tags on this repository.
 
-villes : 
+Authors
+Billie Thompson - Initial work - PurpleBooth
+See also the list of contributors who participated in this project.
 
-["Mont Saint Michel",
-"St Malo",
-"Bayeux",
-"Le Havre",
-"Rouen",
-"Paris",
-"Amiens",
-"Lille",
-"Strasbourg",
-"Chateau du Haut Koenigsbourg",
-"Colmar",
-"Eguisheim",
-"Besancon",
-"Dijon",
-"Annecy",
-"Grenoble",
-"Lyon",
-"Gorges du Verdon",
-"Bormes les Mimosas",
-"Cassis",
-"Marseille",
-"Aix en Provence",
-"Avignon",
-"Uzes",
-"Nimes",
-"Aigues Mortes",
-"Saintes Maries de la mer",
-"Collioure",
-"Carcassonne",
-"Ariege",
-"Toulouse",
-"Montauban",
-"Biarritz",
-"Bayonne",
-"La Rochelle"]
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Acknowledgments
+Hat tip to anyone whose code was used
+Inspiration
+etc
