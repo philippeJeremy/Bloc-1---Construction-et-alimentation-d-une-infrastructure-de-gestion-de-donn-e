@@ -4,6 +4,7 @@ import logging
 
 from scrapy.crawler import CrawlerProcess
 
+# Récupération des hôtels
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
     start_urls = ['https://www.booking.com/index.fr.html']

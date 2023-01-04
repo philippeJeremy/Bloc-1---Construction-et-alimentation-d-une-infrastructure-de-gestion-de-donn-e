@@ -5,6 +5,7 @@ import logging
 
 from scrapy.crawler import CrawlerProcess
 
+# Information complémentaire sur les hôtels
 class QuotesSpider2(scrapy.Spider):
     name = "spider2"
     file = open("hotel_1.json")
