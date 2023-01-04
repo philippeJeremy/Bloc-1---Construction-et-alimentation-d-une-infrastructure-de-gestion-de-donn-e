@@ -19,18 +19,12 @@ for ville in villes:
     lon = r.json()[0]["lon"]
     a = requests.get(f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={key}&lang=fr&units=metric")
     data = a.json()
-    temps.append({"id" : id, "jour_1" :  [(data.get('list')[1].get('main').get('temp_max')),
-                                                                            data.get('list')[1].get('weather')[0].get('description')],
-                                        "jour_2" : [data.get('list')[9].get('main').get('temp_max'),
-                                                                            data.get('list')[9].get('weather')[0].get('description')],
-                                        "jour_3" : [data.get('list')[17].get('main').get('temp_max'),
-                                                                            data.get('list')[17].get('weather')[0].get('description')],
-                                        "jour_4" : [data.get('list')[25].get('main').get('temp_max'),
-                                                                            data.get('list')[25].get('weather')[0].get('description')],
-                                        "jour_5" : [data.get('list')[33].get('main').get('temp_max'),
-                                                                            data.get('list')[33].get('weather')[0].get('description')],
-                                                                            "lat" : lat, "long" : lon
-                                                                           })
-                                 
+    temps.append({"id" : id, "temperature" : [(data.get('list')[1].get('main').get('temp_max')), data.get('list')[9].get('main').get('temp_max'),
+                                        data.get('list')[17].get('main').get('temp_max'), data.get('list')[25].get('main').get('temp_max'),
+                                        data.get('list')[33].get('main').get('temp_max')],
+                            "temps" : [data.get('list')[1].get('weather')[0].get('description'), data.get('list')[9].get('weather')[0].get('description'),
+                                        data.get('list')[17].get('weather')[0].get('description'), data.get('list')[25].get('weather')[0].get('description'),
+                                        data.get('list')[33].get('weather')[0].get('description')], "lat" : lat, "long" : lon })
+
 with open('temps.json', 'w', newline="") as f:
         json.dump(temps, f) 
