@@ -7,10 +7,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Récupération du temps sur 5 jours
-villes = ["Le Mont-Saint-Michel","Saint-Malo","Bayeux","Le Havre","Rouen","Paris","Amiens","Lille","Strasbourg","Château du Haut-Kœnigsbourg","Colmar","Eguisheim","Besançon","Dijon","Annecy","Grenoble","Lyon","Gorges du Verdon","Bormes-les-Mimosas","Cassis","Marseille","Aix-en-Provence","Avignon","Uzès","Nîmes","Aigues-Mortes","Les Saintes-Maries-de-la-Mer","Collioure","Carcassonne","Ariège","Toulouse","Montauban","Biarritz","Bayonne","La Rochelle"]
+villes = ["Le Mont-Saint-Michel","Saint-Malo","Bayeux","Le Havre","Rouen","Paris","Amiens","Lille","Strasbourg",
+        "Château du Haut-Kœnigsbourg","Colmar","Eguisheim","Besançon","Dijon","Annecy","Grenoble","Lyon","Gorges du Verdon",
+        "Bormes-les-Mimosas","Cassis","Marseille","Aix-en-Provence","Avignon","Uzès","Nîmes","Aigues-Mortes","Les Saintes-Maries-de-la-Mer",
+        "Collioure","Carcassonne","Ariège","Toulouse","Montauban","Biarritz","Bayonne","La Rochelle"]
+
 key = os.getenv("APIKEY")
+
 id = 0
+
 temps = []
+
 for ville in villes:
     id += 1
     url = f"https://nominatim.openstreetmap.org/?addressdetails=1&q={ville}&format=json&limit=1"
