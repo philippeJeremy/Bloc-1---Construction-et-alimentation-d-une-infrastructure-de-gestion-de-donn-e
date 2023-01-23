@@ -1,8 +1,8 @@
 # Bloc-1-Construction-et-alimentation-d-une-infrastructure-de-gestion-de-donnee
 
-https://share.vidyard.com/watch/yeJ1Zq5zRK2mUgHDJusSpW?
+video: https://share.vidyard.com/watch/yeJ1Zq5zRK2mUgHDJusSpW?
 
-https://www.francecompetences.fr/recherche/rncp/35288/
+certification: https://www.francecompetences.fr/recherche/rncp/35288/
 
 This project from zero you don't have any data you have to scrap it and then store it then recover it to clean it and store it in an SQL database for exploitation.
 
